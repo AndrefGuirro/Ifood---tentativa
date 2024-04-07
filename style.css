@@ -1,0 +1,196 @@
+/* Define as propriedades padrão para todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define as propriedades do body */
+body {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 1em;
+    background-image: url('images/iFood_blc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estiliza a barra de navegação */
+nav {
+    background-color: #f7f7f7;
+}
+
+/* Estiliza os links dentro da navegação */
+nav a {
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+/* Estiliza o logo do iFood */
+#logo {
+    font-size: 1.25em;
+    padding: 10px;
+}
+
+/* Estiliza o menu */
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;    
+}
+
+/* Estiliza o link para se parecer com um botão */
+.botao-entrar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ea1d2c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Adiciona estilo de hover ao link */
+.botao-entrar:hover {
+    background-color: #c2121f;
+}
+
+
+/* Estiliza os itens do menu */
+#menu li a {
+    display: block;
+    color: rgb(34, 34, 34);
+    padding: 10px;
+}
+
+/* Estiliza os itens do menu quando hover */
+#menu li a:hover {
+    color: #ea1d2c;
+}
+
+/* Estiliza os botões do menu */
+#menu button {
+    width: 100%;
+    max-width: 100px;
+    background: #ea1d2c;
+    color: #fff;
+    max-height: 46px;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Estiliza o conteúdo da página */
+.conteudo h2 {
+    font-size: 3em;
+    color: #3e3e3e;
+    font-weight: 600;
+    padding: 80px 5px 5px 5px;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.conteudo p {
+    color: #3e3e3e;
+    font-size: 1.10em;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Estiliza o formulário de busca */
+.form {
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+
+.form .busca {
+    width: calc(100% - 200px);
+    max-width: 340px;
+    background: #f2f2f2;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.form .busca input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+.form .busca input::placeholder {
+    font-weight: 400;
+    color: #a6a6a6;
+    padding: 10px;
+}
+
+.form button {
+    width: 100%;
+    max-width: 220px;
+    background: #ea1d2c;
+    color: #fff;
+    font-weight: 400;
+    border: 0;
+    border-radius: 8px;
+}
+
+.form button:hover {
+    background: #c2121f;
+}
+
+/* Responsividade*/
+@media all and (max-width: 960px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }   
+
+    #menu li {
+        margin: 3px 10px;
+        padding: x 10px;
+        list-style-type: none;
+    }
+
+    /* menu quando está em modo responsivo */
+    #listras {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+    }
+
+    .conteudo h2,
+    .conteudo p {
+        text-align: center;
+    }
+
+    /* Oculta os itens do menu em modo responsivo */
+    .item {
+        display: none;
+    }
+
+    /* Exibe os itens do menu quando o menu está ativo em modo responsivo */
+    .active .item {
+        display: block;
+    }
+
+    /* Oculta o botão de entrar em modo responsivo */
+    .botao-entrar {
+        display: none;
+    }
+
+    /* Exibe o botão de entrar quando o menu está ativo em modo responsivo */
+    .active .botao-entrar {
+        display: block;
+    }
+}
